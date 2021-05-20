@@ -1,10 +1,13 @@
 import React, { useState } from "react";
 import Date from "./Date";
+import NewMood from "./NewMood";
 
-function Moods(props) {
+function Moods() {
 
     var isClicked = false;
     const [clicked, afterClick] = useState(isClicked);
+
+    const [currentMood, selectMood] = useState("");
 
     function updateClick(){
         const clicked = true;
@@ -13,14 +16,20 @@ function Moods(props) {
 
     function happyColor(){
         document.getElementById("card").style.backgroundColor = 'teal';
+        var currentMood = "happy";
+        selectMood(currentMood);
     }
 
     function okayColor(){
         document.getElementById("card").style.background = "gold";
+        var currentMood = "okay";
+        selectMood(currentMood);
     }
 
     function sadColor(){
         document.getElementById("card").style.background = "red";
+        var currentMood = "sad";
+        selectMood(currentMood);
     }
 
 
@@ -34,7 +43,7 @@ function Moods(props) {
                 <button onClick={() => {happyColor(); updateClick()}}  className="happyButton">Happy</button>
                 <button onClick={() => {okayColor(); updateClick()}} className="okayButton">Okay</button>
                 <button onClick={() => {sadColor(); updateClick()}} className="sadButton">Sad</button>
-            </div></div> ) : (<div className="moodContainer">Your mood is {props.mood}</div> )}            
+            </div></div> ) : (<div className="moodContainer"><NewMood mood={currentMood} /></div> )}            
                
         </div>
     )
