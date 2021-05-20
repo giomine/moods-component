@@ -36,22 +36,24 @@ function Card() {
     function undefinedMood(){
         setTimeout(function() {
             document.querySelector(".loader").setAttribute("id", "loader");
-        }, 3000);
+        }, 2000);
     }
 
 
     return (
-        <div className="card" id="card">
-            <h1>Today</h1>
-            <Date />
+        <div className="container">
+            <div className="card" id="card">
+                <h1>Today</h1>
+                <Date />
 
-            {!clicked ? (<div>{undefinedMood()}<div className="loader"></div><h2>How are you feeling today?</h2>
-            <div className="buttonsContainer">
-                <button onClick={() => {happyColor(); updateClick()}}  className="happyButton">Happy</button>
-                <button onClick={() => {okayColor(); updateClick()}} className="okayButton">Okay</button>
-                <button onClick={() => {sadColor(); updateClick()}} className="sadButton">Sad</button>
-            </div></div>) : (<div className="moodContainer"><MoodText mood={currentMood} /></div> )}            
-               
+                {!clicked ? (<div>{undefinedMood()}<div className="loader"></div><h2>How are you feeling today?</h2>
+                <div className="buttonsContainer">
+                    <button onClick={() => {happyColor(); updateClick()}}  className="happyButton">Happy</button>
+                    <button onClick={() => {okayColor(); updateClick()}} className="okayButton">Okay</button>
+                    <button onClick={() => {sadColor(); updateClick()}} className="sadButton">Sad</button>
+                </div></div>) : (<div className="moodContainer"><MoodText mood={currentMood} /></div> )}            
+                
+            </div>
         </div>
     )
 }
