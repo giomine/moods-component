@@ -59,6 +59,10 @@ code {
   padding-top: 30px;
   padding-left: 50px;
 }
+/* need this to only trigger when on 'sad' card; date also needs to change to white */
+/* .selectedMood h2{
+  color: rgb(240, 240, 240);
+} */
 
 .buttonsContainer{
   display: flex;
