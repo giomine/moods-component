@@ -3,6 +3,7 @@ import React from "react";
 function todaysDate(){
 
     var date = new Date();
+    var day = date.getDay();
     // var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
@@ -23,7 +24,7 @@ function todaysDate(){
     return (
         <div>
         {`
-            ${date.getDay()}${nth(date)}
+            ${day}${nth(day)}
             ${month[date.getMonth()]}
             ${date.getFullYear()}
         `}
