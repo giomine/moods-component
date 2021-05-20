@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Date from "./Date";
-import NewMood from "./NewMood";
+import MoodText from "./MoodText";
 
-function Moods() {
+function Card() {
 
     var isClicked = false;
     const [clicked, afterClick] = useState(isClicked);
@@ -43,10 +43,10 @@ function Moods() {
                 <button onClick={() => {happyColor(); updateClick()}}  className="happyButton">Happy</button>
                 <button onClick={() => {okayColor(); updateClick()}} className="okayButton">Okay</button>
                 <button onClick={() => {sadColor(); updateClick()}} className="sadButton">Sad</button>
-            </div></div> ) : (<div className="moodContainer"><NewMood mood={currentMood} /></div> )}            
+            </div></div> ) : (<div className="moodContainer"><MoodText mood={currentMood} /></div> )}            
                
         </div>
     )
 }
 
-export default Moods;
+export default Card;

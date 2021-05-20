@@ -1,6 +1,6 @@
 import React from "react";
 
-function NewMood(props){
+function MoodText(props){
     return(
         <div>
             Your mood is {props.mood}
@@ -8,4 +8,4 @@ function NewMood(props){
     )
 }
 
-export default NewMood;
+export default MoodText;
