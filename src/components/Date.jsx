@@ -3,7 +3,7 @@ import React from "react";
 function todaysDate(){
 
     var date = new Date();
-    var day = date.getDay();
+    var day = date.getDate();
     // var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
     var month = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
 
