@@ -12,22 +12,23 @@ function Card() {
     function updateClick(){
         const clicked = true;
         afterClick(clicked);
+        document.getElementById("card").style.border = 'none';
     }
 
     function happyColor(){
-        document.getElementById("card").style.backgroundColor = 'teal';
+        document.getElementById("card").style.backgroundColor = 'rgb(57, 201, 186)';
         var currentMood = "happy";
         selectMood(currentMood);
     }
 
     function okayColor(){
-        document.getElementById("card").style.background = "gold";
+        document.getElementById("card").style.background = "rgb(241, 205, 0)";
         var currentMood = "okay";
         selectMood(currentMood);
     }
 
     function sadColor(){
-        document.getElementById("card").style.background = "red";
+        document.getElementById("card").style.background = "rgb(255, 78, 78)";
         var currentMood = "sad";
         selectMood(currentMood);
     }
@@ -43,10 +44,9 @@ function Card() {
     return (
         <div className="container">
             <div className="card" id="card">
-                <h1>Today</h1>
                 <Date />
 
-                {!clicked ? (<div>{undefinedMood()}<div className="loader"></div><h2>How are you feeling today?</h2>
+                {!clicked ? (<div className="selectionContainer">{undefinedMood()}<div className="loader"></div><h2>How are you feeling today?</h2>
                 <div className="buttonsContainer">
                     <button onClick={() => {happyColor(); updateClick()}}  className="happyButton">Happy</button>
                     <button onClick={() => {okayColor(); updateClick()}} className="okayButton">Okay</button>

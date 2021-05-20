@@ -22,7 +22,8 @@ function todaysDate(){
 
 
     return (
-        <div>
+        <div className="dateContainer">
+          <h2>Today</h2>
         {`
             ${day}${nth(day)}
             ${month[date.getMonth()]}
