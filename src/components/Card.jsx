@@ -32,18 +32,25 @@ function Card() {
         selectMood(currentMood);
     }
 
+    // for undefined, set a timer to 5 seconds and if a button isn't clicked, show loading spinner. should also still be able to click buttons.
+    function undefinedMood(){
+        setTimeout(function() {
+            alert("You haven't picked a mood yet!");
+        }, 1000);
+    }
+
 
     return (
         <div className="card" id="card">
             <h1>Today</h1>
             <Date />
 
-            {!clicked ? (<div><h2>How are you feeling today?</h2>
+            {!clicked ? (<div>{undefinedMood()}<h2>How are you feeling today?</h2>
             <div className="buttonsContainer">
                 <button onClick={() => {happyColor(); updateClick()}}  className="happyButton">Happy</button>
                 <button onClick={() => {okayColor(); updateClick()}} className="okayButton">Okay</button>
                 <button onClick={() => {sadColor(); updateClick()}} className="sadButton">Sad</button>
-            </div></div> ) : (<div className="moodContainer"><MoodText mood={currentMood} /></div> )}            
+            </div></div>) : (<div className="moodContainer"><MoodText mood={currentMood} /></div> )}            
                
         </div>
     )
