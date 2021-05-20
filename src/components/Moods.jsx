@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Date from "./Date";
 
 function Moods(props) {
 
@@ -26,7 +27,7 @@ function Moods(props) {
     return (
         <div className="card" id="card">
             <h1>Today</h1>
-            <div>{new Date().toDateString()}</div>
+            <Date />
 
             {!clicked ? (<div><h2>How are you feeling today?</h2>
             <div className="buttonsContainer">
