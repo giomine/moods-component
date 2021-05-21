@@ -77,6 +77,9 @@ code {
   color: rgb(26, 26, 26);
   letter-spacing: 1.5px;
 }
+.happyButton:hover, .okayButton:hover, .sadButton:hover{
+  transform: scale(1.05);
+}
 
 .happyButton{
   background: rgb(57, 201, 186);
@@ -90,6 +93,7 @@ code {
   background: rgb(255, 78, 78);
   border: 1px solid rgb(231, 70, 70);
 }
+
 .moodContainer{
   height: 100px;
   display: flex;
