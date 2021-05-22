@@ -185,3 +185,10 @@ code {
   .happyButton, .okayButton, .sadButton { height: 40px; width: 160px; font-size: 17px; }
   .selectedMood { width: 100%; padding-top: 350px; padding-left: 0; }
 }
+
+
+
+/* IDEAS */
+/*  - An undo or edit function in case the user clicked the wrong mood by mistake
+    - An option to input text if the user wants to elaborate on their mood or reasons for it. This would then be included on the state that shows "Your mood is..."
+    - As long as the data is anonymous, the inputted text could be feedback or constructive criticism on workplace issues */
